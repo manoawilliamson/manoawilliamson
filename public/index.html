@@ -1,126 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manoa Williamson - Developer</title>
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="3"/>
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="3" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
-        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
     </button>
     <div class="container">
         <main class="main-content">
             <section class="profile">
                 <div class="avatar">
-                    <img src="images/login.jpg" alt="Profile Avatar">
+                    <img src="images/log.jpeg" alt="Profile Avatar">
                 </div>
                 <h1 class="name">Manoa Williamson</h1>
                 <p class="bio">
-                    Full-stack developer crafting elegant digital experiences with modern web technologies.
+                    A freelance web developer and Indie Hacker. I specialize in creating fast, responsive, and
+                    interactive websites, as well as web applications, e-commerce platforms, and landing pages.
                 </p>
+                <div class="contact-links-top">
+                    <a href="mailto:manoa@williamson.dev">Book a call</a> or reach out on <a
+                        href="https://github.com/manoawilliamson">GitHub</a>.
+                </div>
             </section>
+
+
 
             <section class="skills">
                 <h2>Skills</h2>
                 <div class="skills-grid">
+                    <div class="skill-item">HTML5, CSS3, Responsive Design</div>
                     <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">React</div>
-                    <div class="skill-item">Node.js</div>
-                    <div class="skill-item">TypeScript</div>
-                    <div class="skill-item">HTML/CSS</div>
-                    <div class="skill-item">MongoDB</div>
-                    <div class="skill-item">Express</div>
-                    <div class="skill-item">Git</div>
+                    <div class="skill-item">Front-End Frameworks (React / Vue)</div>
+                    <div class="skill-item">Backend Development (Node.js / Java, PHP)</div>
+                    <div class="skill-item">REST API Development</div>
+                    <div class="skill-item">SQL Databases (PostgreSQL, MySQL)</div>
+                    <div class="skill-item">Git Version Control</div>
+                </div>
+            </section>
+
+            <section class="experience">
+                <h2>Experience</h2>
+                <div class="list-container">
+                    <div class="list-item">
+                        <a href="#" class="item-name">SOA</a>
+                        <span class="item-detail">Web Developer - Internship</span>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="item-name">Freelance</a>
+                        <span class="item-detail">Web Developer</span>
+                    </div>
+                    <div class="list-item">
+                        <a href="#" class="item-name">BICI</a>
+                        <span class="item-detail"> QA Tester</span>
+                    </div>
                 </div>
             </section>
 
             <section class="projects">
                 <h2>Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>TaskFlow</h3>
-                        <p>Task management app with real-time collaboration</p>
-                        <a href="https://github.com/manoawilliamson/taskflow" target="_blank" rel="noopener noreferrer">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Minimal CMS</h3>
-                        <p>Lightweight content management system</p>
-                        <a href="https://github.com/manoawilliamson/minimal-cms" target="_blank" rel="noopener noreferrer">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>UI Kit</h3>
-                        <p>Reusable React component library</p>
-                        <a href="https://github.com/manoawilliamson/react-components" target="_blank" rel="noopener noreferrer">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Weather App</h3>
-                        <p>Real-time weather forecasting with location tracking</p>
-                        <a href="https://github.com/manoawilliamson/weather-app" target="_blank" rel="noopener noreferrer">View Project</a>
-                    </div>
+                <div class="project-cards">
+                    <a href="https://github.com/manoawilliamson/taskflow" target="_blank" class="project-card">
+                        <div class="card-header">
+                            <h3 class="repo-name">TaskFlow</h3>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="external-icon">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                        </div>
+                        <p class="repo-description">Task management app with real-time collaboration</p>
+                    </a>
+                    <a href="https://github.com/manoawilliamson/minimal-cms" target="_blank" class="project-card">
+                        <div class="card-header">
+                            <h3 class="repo-name">Minimal CMS</h3>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="external-icon">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                        </div>
+                        <p class="repo-description">Lightweight content management system</p>
+                    </a>
+                    <a href="https://github.com/manoawilliamson/react-components" target="_blank" class="project-card">
+                        <div class="card-header">
+                            <h3 class="repo-name">UI Kit</h3>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="external-icon">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                        </div>
+                        <p class="repo-description">Reusable React component library</p>
+                    </a>
+                    <a href="https://github.com/manoawilliamson/weather-app" target="_blank" class="project-card">
+                        <div class="card-header">
+                            <h3 class="repo-name">Weather App</h3>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="external-icon">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                        </div>
+                        <p class="repo-description">Real-time weather forecasting with location tracking</p>
+                    </a>
                 </div>
             </section>
 
-            <section class="contact">
-                <h2>Contact</h2>
-                <div class="contact-content">
-                    <div class="contact-links">
-                        <a href="mailto:manoa@williamson.dev" class="contact-link">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                                <path d="m22 7-10 5L2 7"/>
-                            </svg>
-                            Email
-                        </a>
-                        <a href="https://github.com/manoawilliamson" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                            </svg>
-                            GitHub
-                        </a>
-                        <a href="https://linkedin.com/in/manoawilliamson" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                <rect x="2" y="9" width="4" height="12"/>
-                                <circle cx="4" cy="4" r="2"/>
-                            </svg>
-                            LinkedIn
-                        </a>
+            <section class="writing">
+                <h2>Writing</h2>
+                <div class="list-container">
+                    <!-- BLOG_POSTS_START -->
+                    <div class="list-item">
+                        <a href="blog/web-development-in-2026.html" class="item-name">Web development in 2026</a>
+                        <span class="item-detail">Mar 22, 2026</span>
                     </div>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+
+
+                    <!-- BLOG_POSTS_END -->
                 </div>
             </section>
+
+
+            <footer class="footer">
+                <hr class="separator">
+                <div class="footer-links">
+                    <a href="https://github.com/manoawilliamson" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://twitter.com/manoawilliamson" target="_blank" rel="noopener noreferrer">Twitter</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Discord</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Telegram</a>
+                </div>
+            </footer>
         </main>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

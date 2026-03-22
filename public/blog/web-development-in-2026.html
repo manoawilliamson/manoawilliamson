@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web development in 2026 - Manoa Williamson</title>
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="3" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+    </button>
+    <div class="container">
+        <nav class="nav">
+            <a href="../index.html" class="back-link">← Back</a>
+        </nav>
+
+        <main class="main-content">
+            <article class="post">
+                <header class="post-header">
+                    <h1 class="post-title">Web development in 2026</h1>
+                    <time class="post-date">Mar 22, 2026</time>
+                </header>
+
+                <div class="post-content">I've been building for the web for over a decade. I've watched frameworks rise
+                    and die, paradigms shift overnight, and entire ecosystems get abandoned mid-project. But 2026 feels
+                    different — and not just because of AI. Something structural has changed, and I want to talk about
+                    it honestly.
+
+                    The AI layer is no longer optional.
+                    Let me be straight with you: I resisted AI coding tools longer than most. I told myself it was about
+                    craft, about really understanding the code I shipped. And in a way, I still believe that. But the
+                    gap between what I can produce in a day with AI assistance versus without it has become so wide that
+                    refusing these tools is effectively a choice to work at half speed.
+                    In 2026, AI assistance isn't a parlor trick. It's infrastructure. I'm not talking about autocomplete
+                    on steroids — I mean tools that understand your codebase holistically, that can refactor a component
+                    tree, write end-to-end tests, and flag accessibility violations in a single pass. The debugging loop
+                    alone has changed my life. I used to lose hours to a single subtle bug. Now I describe the symptom,
+                    paste the context, iterate. The AI gets it wrong plenty — but the average time-to-resolution has
+                    dropped dramatically. That compounds. <br>
+
+                    The framework wars are finally over. Sort of.
+                    React didn't "win" the way anyone expected. It still dominates enterprise codebases, but the
+                    conversation has shifted. In 2026, nobody interesting is arguing React vs. Vue vs. Svelte. The real
+                    argument is server-first vs. client-first, and where your rendering boundary sits.
+                    The mental model has flipped. We no longer think of the server as a data delivery mechanism for a
+                    client-side app. The server is the app. The client is just the interactive surface. That inversion
+                    changes everything about how you architect systems, and if you haven't internalized it yet, you're
+                    building on a cracking foundation.
+
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <hr class="separator">
+            <div class="footer-links">
+                <a href="https://github.com/manoawilliamson" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://twitter.com/manoawilliamson" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Telegram</a>
+            </div>
+        </footer>
+    </div>
+    <script src="../script.js"></script>
+</body>
+
+</html>

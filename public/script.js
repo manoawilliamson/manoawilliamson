@@ -6,13 +6,15 @@ const html = document.documentElement;
 const currentTheme = localStorage.getItem('theme') || 'light';
 html.setAttribute('data-theme', currentTheme);
 
-themeToggle.addEventListener('click', () => {
-  const theme = html.getAttribute('data-theme');
-  const newTheme = theme === 'light' ? 'dark' : 'light';
-  
-  html.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-});
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const theme = html.getAttribute('data-theme');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+}
 
 // Contact form submission
 const contactForm = document.getElementById('contactForm');
@@ -46,5 +48,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
+  });
+});
+
+// Intelligent Blog Content Parser (Converts plain text to paragraphs)
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.post-content').forEach(div => {
+    // Get raw text and split by double newlines for paragraphs
+    const rawText = div.innerText.trim();
+    if (!rawText) return;
+
+    // Split into paragraphs, trim each, and wrap in <p> tags
+    const paragraphs = rawText.split(/\n\s*\n/)
+      .map(p => `<p>${p.trim().replace(/\n/g, ' ')}</p>`)
+      .join('');
+    
+    div.innerHTML = paragraphs;
   });
 });

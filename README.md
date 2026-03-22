@@ -16,10 +16,13 @@ A clean, minimal personal website built with Node.js and Express, featuring a da
 minimal-website/
 ├── server.js          # Express server
 ├── package.json       # Node.js dependencies
+├── scripts/
+│   └── add-blog.js    # Automated blog generator
 ├── public/
 │   ├── index.html     # Main HTML file
 │   ├── styles.css     # CSS with dark mode support
-│   └── script.js      # JavaScript for theme toggle
+│   ├── script.js      # JavaScript for theme toggle
+│   └── blog/          # Individual blog post pages
 └── README.md          # This file
 ```
 
@@ -37,6 +40,16 @@ minimal-website/
 
 3. **Open your browser**:
    Navigate to `http://localhost:3000`
+
+## Adding Blog Posts
+
+Adding new writing is automated via a built-in script. Simply run:
+
+```bash
+node scripts/add-blog.js "Your Title" "Your plain text content here..."
+```
+
+This will automatically create a new HTML file in `public/blog/`, apply the minimalist styling, and insert the link into your main `index.html`.
 
 ## Customization
 
@@ -57,12 +70,15 @@ The theme system uses CSS custom properties. You can modify colors in `public/st
 
 ### Adding New Projects
 
-Add new project links in the `.project-links` div:
+The project section uses **Box Cards** for a professional look. Update `public/index.html` in the `.project-cards` div:
 
 ```html
-<a href="your-project-url" target="_blank" rel="noopener noreferrer" class="project-link">
-  <h3>Project Name</h3>
-  <p>Project description</p>
+<a href="your-url" target="_blank" class="project-card">
+    <div class="card-header">
+        <h3 class="repo-name">Project Name</h3>
+        <svg class="external-icon">...</svg>
+    </div>
+    <p class="repo-description">Project description</p>
 </a>
 ```
 
