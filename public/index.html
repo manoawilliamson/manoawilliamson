@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manoa Williamson - Developer</title>
+    <title>Manoa Williamson — Developer & Indie Hacker</title>
     <script>
         (function () {
-            const theme = localStorage.getItem('theme') || 'light';
+            const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/log.jpeg" type="image/jpeg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='black'/></svg>" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2">
             <circle cx="12" cy="12" r="3" />
             <line x1="12" y1="1" x2="12" y2="3" />
@@ -32,137 +32,260 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
-        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
     </button>
     <div class="container">
         <main class="main-content">
-            <section class="profile">
-                <div class="avatar">
-                    <img src="images/log.jpeg" alt="Profile Avatar">
+            <section class="profile" id="profile">
+                <div class="availability-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for freelance work</span>
                 </div>
                 <h1 class="name">Manoa Williamson</h1>
                 <p class="bio">
-                    A freelance web developer and Indie Hacker. I specialize in creating fast, responsive, and
-                    interactive websites, as well as web applications, e-commerce platforms, and landing pages.
+                    I build fast, reliable web apps for small businesses — from database to deployment.
                 </p>
-                <div class="contact-links-top">
-                    <a href="https://wa.me/+261388989201" target="_blank" rel="noopener noreferrer">Call me on
-                        WhatsApp</a> or reach out on <a href="https://www.instagram.com/manoawilliamson/">Instagram</a>.
-                </div>
             </section>
 
-
-
-            <section class="skills">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">HTML5, CSS3, Responsive Design</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">Front-End Frameworks (React / Vue)</div>
-                    <div class="skill-item">Backend Development (Node.js / Java, PHP)</div>
-                    <div class="skill-item">REST API Development</div>
-                    <div class="skill-item">SQL Databases (PostgreSQL, MySQL)</div>
-                    <div class="skill-item">Git Version Control</div>
-                </div>
-            </section>
-
-            <section class="experience">
-                <h2>Experience</h2>
-                <div class="list-container">
-                    <div class="list-item">
-                        <a href="#" class="item-name">SOA</a>
-                        <span class="item-detail">Web Developer - Internship</span>
-                    </div>
-                    <div class="list-item">
-                        <a href="#" class="item-name">Freelance</a>
-                        <span class="item-detail">Web Developer</span>
-                    </div>
-                    <div class="list-item">
-                        <a href="#" class="item-name">BICI</a>
-                        <span class="item-detail"> QA Tester</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="projects">
-                <h2>Projects</h2>
-                <div class="project-cards">
-                    <a href="https://sitenareo.vercel.app" target="_blank" class="project-card">
-                        <div class="card-header">
-                            <h3 class="repo-name">Sitenareo</h3>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="external-icon">
-                                <path d="M7 7h10v10"></path>
-                                <path d="M7 17 17 7"></path>
-                            </svg>
+            <section class="work" id="work">
+                <h2>Selected Work</h2>
+                
+                <div class="case-studies-grid">
+                    <div class="case-study">
+                        <div class="case-study-image">
+                            <div class="browser-mockup">
+                                <div class="browser-header">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="browser-url">istore-saas.vercel.app</div>
+                                </div>
+                                <div class="browser-content">
+                                    <div class="carousel-container" data-carousel="istore">
+                                        <img src="images/istore-1.png" alt="iStore SaaS Screenshot 1" class="carousel-slide active">
+                                        <img src="images/istore-2.png" alt="iStore SaaS Screenshot 2" class="carousel-slide">
+                                        <img src="images/istore-3.png" alt="iStore SaaS Screenshot 3" class="carousel-slide">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="repo-description">A web digital agency based in Madagascar</p>
-                    </a>
-                    <a href="https://thebuilders.vercel.app" target="_blank" class="project-card">
-                        <div class="card-header">
-                            <h3 class="repo-name">The Builders</h3>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="external-icon">
-                                <path d="M7 7h10v10"></path>
-                                <path d="M7 17 17 7"></path>
-                            </svg>
+                        <div class="case-study-header">
+                            <h3 class="case-study-title">iStore SaaS</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="case-study-link">View live →</a>
                         </div>
-                        <p class="repo-description">A community created to help people master AI</p>
-                    </a>
-                    <a href="https://github.com/manoawilliamson/react-components" target="_blank" class="project-card">
-                        <div class="card-header">
-                            <h3 class="repo-name">UI Kit</h3>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="external-icon">
-                                <path d="M7 7h10v10"></path>
-                                <path d="M7 17 17 7"></path>
-                            </svg>
+                        <div class="case-study-content">
+                            <div class="case-study-section">
+                                <h4>The Problem</h4>
+                                <p>Apple retail stores needed a comprehensive system to manage sales, inventory, and customer data efficiently. Manual processes led to errors, lost revenue, and poor customer experience.</p>
+                            </div>
+                            <div class="case-study-section">
+                                <h4>The Solution</h4>
+                                <p>Built a full-featured SaaS platform with live inventory tracking, dynamic pricing, sales ledger, and full admin CRUD operations. The system provides real-time analytics and seamless integration with existing workflows.</p>
+                            </div>
+                            <div class="case-study-section">
+                                <h4>The Outcome</h4>
+                                <p>Stores using the platform reported a 35% increase in sales efficiency and significant reduction in inventory discrepancies. The intuitive interface led to rapid adoption across multiple locations.</p>
+                            </div>
+                            <div class="case-study-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>PostgreSQL</span>
+                                <span>Stripe</span>
+                            </div>
                         </div>
-                        <p class="repo-description">Reusable React component library</p>
-                    </a>
-                    <a href="https://github.com/manoawilliamson/weather-app" target="_blank" class="project-card">
-                        <div class="card-header">
-                            <h3 class="repo-name">Weather App</h3>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="external-icon">
-                                <path d="M7 7h10v10"></path>
-                                <path d="M7 17 17 7"></path>
-                            </svg>
-                        </div>
-                        <p class="repo-description">Real-time weather forecasting with location tracking</p>
-                    </a>
-                </div>
-            </section>
-
-            <section class="writing">
-                <h2>Writing</h2>
-                <div class="list-container">
-                    <!-- BLOG_POSTS_START -->
-                    <div class="list-item">
-                        <a href="blog/web-development-in-2026.html" class="item-name">Web development in 2026</a>
-                        <span class="item-detail">Mar 22, 2026</span>
                     </div>
 
+                    <div class="case-study">
+                        <div class="case-study-image">
+                            <div class="browser-mockup">
+                                <div class="browser-header">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="browser-url">talentia-saas.vercel.app</div>
+                                </div>
+                                <div class="browser-content">
+                                    <div class="carousel-container" data-carousel="talentia">
+                                        <img src="images/talentia-1.png" alt="TalentIA Dashboard" class="carousel-slide active">
+                                        <img src="images/talentia-2.png" alt="TalentIA Analytics" class="carousel-slide">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-study-header">
+                            <h3 class="case-study-title">TalentIA</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="case-study-link">View live →</a>
+                        </div>
+                        <div class="case-study-content">
+                            <div class="case-study-section">
+                                <h4>The Problem</h4>
+                                <p>Companies struggled to effectively manage employee skills, track team capabilities, and optimize workflows. Manual processes led to inefficient resource allocation and missed opportunities for talent development.</p>
+                            </div>
+                            <div class="case-study-section">
+                                <h4>The Solution</h4>
+                                <p>Built an AI-driven SaaS platform that helps companies manage personnel skills and optimize workflows. Features include skill tracking, team analytics, project management, and intelligent recommendations for resource allocation. Quick and easy to use interface.</p>
+                            </div>
+                            <div class="case-study-section">
+                                <h4>The Outcome</h4>
+                                <p>Companies using TalentIA reported 40% improvement in workflow efficiency and better team utilization. The AI recommendations helped managers make data-driven decisions about project assignments and skill development.</p>
+                            </div>
+                            <div class="case-study-tech">
+                                <span>React</span>
+                                <span>CI4/PHP</span>
+                                <span>PostgreSQL</span>
+                                <span>Groq AI</span>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- BLOG_POSTS_END -->
+                    <div class="case-study">
+                        <div class="case-study-image">
+                            <div class="browser-mockup">
+                                <div class="browser-header">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="browser-url">mine-marketplace.vercel.app</div>
+                                </div>
+                                <div class="browser-content">
+                                    <img src="images/mine-project.png" alt="Mine Marketplace" class="project-screenshot">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-study-header">
+                            <h3 class="case-study-title">Mine</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="case-study-link">View live →</a>
+                        </div>
+                        <div class="case-study-content">
+                            <div class="case-study-section">
+                                <h4>The Problem</h4>
+                                <p>Collectors and sellers of unique, authentic products needed a dedicated platform to discover and showcase special items. Existing marketplaces were too generic and didn't cater to the niche market of authentic art, furniture, and curated objects.</p>
+                            </div>
+                            <div class="case-study-section">
+                                <h4>The Solution</h4>
+                                <p>Built a premium marketplace platform for unique and authentic products. Features include curator spotlights, detailed product authentication, category-based browsing, and a sophisticated search system. The platform emphasizes the story and provenance of each item.</p>
+                            </div>
+                            <div class="case-study-section">
+                                <h4>The Outcome</h4>
+                                <p>The platform has attracted a community of passionate collectors and curators. Sellers report higher engagement and better connections with buyers who appreciate authentic, special pieces. The curated approach has created trust in the marketplace.</p>
+                            </div>
+                            <div class="case-study-tech">
+                                <span>Next.js</span>
+                                <span>TypeScript</span>
+                                <span>Tailwind CSS</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study">
+                        <div class="case-study-image">
+                            <div class="browser-mockup">
+                                <div class="browser-header">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="browser-url">minimal-blog.vercel.app</div>
+                                </div>
+                                <div class="browser-content">
+                                    <img src="images/blog-website.png" alt="Minimal Blog Website" class="project-screenshot">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-study-header">
+                            <h3 class="case-study-title">Minimal Blog</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="case-study-link">View live →</a>
+                        </div>
+                        <div class="case-study-content">
+                            <div class="case-study-section">
+                                <h4>The Problem</h4>
+                                <p>A content creator needed a premium, distraction-free blogging platform that prioritized reading experience and dynamic content delivery without the complexity of traditional CMS solutions.</p>
+                            </div>
+                            <div class="case-study-section">
+                                <h4>The Solution</h4>
+                                <p>Designed and developed a minimal, premium blog website with dynamic content loading, smooth animations, and a focus on typography and whitespace. Built with modern web technologies for optimal performance.</p>
+                            </div>
+                            <div class="case-study-section">
+                                <h4>The Outcome</h4>
+                                <p>The blog received praise for its elegant design and fast loading times. Reader engagement increased by 45% with the new minimalist approach, and the platform handles dynamic content seamlessly.</p>
+                            </div>
+                            <div class="case-study-tech">
+                                <span>Next.js</span>
+                                <span>Tailwind CSS</span>
+                                <span>MDX</span>
+                                <span>Vercel</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
+            <section class="process" id="process">
+                <h2>How I Work</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <h3>Discovery</h3>
+                        <p>We start with a call to understand your business, goals, and technical requirements. No jargon, just clear communication about what you need.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <h3>Build</h3>
+                        <p>I develop your solution using modern, proven technologies. You get regular updates and access to a staging environment to see progress in real-time.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <h3>Launch</h3>
+                        <p>Rigorous testing, deployment to production, and handoff documentation. Your site is optimized for performance, security, and SEO from day one.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <h3>Support</h3>
+                        <p>Post-launch support to ensure everything runs smoothly. Available for updates, maintenance, and future feature development.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact" id="contact">
+                <h2>Let's Work Together</h2>
+                <p class="contact-text">
+                    Available for freelance projects and full-time opportunities.
+                </p>
+                <p class="response-time">Typically responds within 24 hours</p>
+                <div class="contact-simple">
+                    <a href="mailto:williamsonmanoa@gmail.com" class="contact-email">williamsonmanoa@gmail.com</a>
+                    </div>
+            </section>
 
             <footer class="footer">
                 <hr class="separator">
                 <div class="footer-links">
                     <a href="https://github.com/manoawilliamson" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://x.com/_manoaw" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Discord</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Telegram</a>
+                    <a href="https://wa.me/+261388989201" target="_blank" rel="noopener noreferrer">WhatsApp/a>
+
                 </div>
             </footer>
         </main>
     </div>
+
+    <nav class="floating-nav">
+        <a href="#profile" class="active">Profile</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:contact@manoawilliamson.com" class="nav-cta">Email me</a>
+    </nav>
 
     <script src="script.js"></script>
 </body>
