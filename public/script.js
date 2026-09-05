@@ -51,5 +51,3 @@ if (copyEmail && copyStatus && navigator.clipboard && window.isSecureContext) {
     resetStatus = setTimeout(() => { copyStatus.textContent = ''; }, 5000);
   });
 }
-const year = document.getElementById('year');
-if (year) year.textContent = new Date().getFullYear();
