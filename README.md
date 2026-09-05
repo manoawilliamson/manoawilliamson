@@ -1,11 +1,10 @@
 # Minimal Personal Website
 
-A clean, minimal personal website built with Node.js and Express, featuring a dark mode toggle.
+A clean, minimal personal website built with Node.js and Express, with a white-and-blue design.
 
 ## Features
 
 - **Minimal Design**: Clean and focused layout with essential information only
-- **Dark Mode**: Toggle between light and dark themes with smooth transitions
 - **Responsive**: Works perfectly on desktop, tablet, and mobile devices
 - **Fast**: Lightweight and optimized for performance
 - **Accessible**: Semantic HTML and proper ARIA labels
@@ -20,8 +19,8 @@ minimal-website/
 │   └── add-blog.js    # Automated blog generator
 ├── public/
 │   ├── index.html     # Main HTML file
-│   ├── styles.css     # CSS with dark mode support
-│   ├── script.js      # JavaScript for theme toggle
+│   ├── styles.css     # Shared portfolio styles
+│   ├── script.js      # Navigation and contact interactions
 │   └── blog/          # Individual blog post pages
 └── README.md          # This file
 ```
@@ -64,9 +63,7 @@ Edit `public/index.html` to update:
 
 ### Styling
 
-The theme system uses CSS custom properties. You can modify colors in `public/styles.css`:
-- Light theme colors are defined in `:root`
-- Dark theme colors are in `[data-theme="dark"]`
+The site uses a single light appearance. Modify the color variables in `:root` in `public/styles.css`.
 
 ### Adding New Projects
 
