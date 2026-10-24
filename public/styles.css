@@ -88,11 +88,12 @@ p { color: var(--muted); }
 .visual-istore { background: #e8e5ed; }
 .visual-talentia { background: #e3e9ed; }
 .visual-church { background: #e8e3dc; }
-.project-visual img { width: 100%; height: 100%; object-fit: cover; object-position: top; border: 1px solid #20211f12; border-radius: 4px; box-shadow: 0 8px 22px #20211f12; transition: transform .35s; }
-.visual-istore img, .visual-talentia img { object-fit: contain; background: #fff; }
-.project-visual:hover img { transform: scale(1.025); }
+.project-visual img { width: 100%; height: 100%; object-fit: contain; border: 1px solid #20211f12; border-radius: 4px; box-shadow: 0 8px 22px #20211f12; transition: transform .35s; }
 .project-open { position: absolute; right: 13px; bottom: 13px; display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: var(--bg); font-size: 17px; transition: color .2s, transform .2s; }
-.project-visual:hover .project-open { transform: translate(2px, -2px); color: var(--accent); }
+@media (hover: hover) and (pointer: fine) {
+  .project-visual:hover img { transform: scale(1.025); }
+  .project-visual:hover .project-open { transform: translate(2px, -2px); color: var(--accent); }
+}
 .project-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin-top: 14px; }
 .project-heading h3 { font-size: 21px; }
 .project-heading > span { color: var(--muted); font-size: 11px; text-align: right; }
