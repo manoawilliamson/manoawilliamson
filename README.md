@@ -1,6 +1,6 @@
-# Minimal Personal Website
+# Personal Portfolio
 
-A clean, minimal personal website built with Node.js and Express, with a white-and-blue design.
+A personal portfolio for showcasing selected work, services, and contact information.
 
 ## Features
 
@@ -15,13 +15,12 @@ A clean, minimal personal website built with Node.js and Express, with a white-a
 minimal-website/
 ├── server.js          # Express server
 ├── package.json       # Node.js dependencies
-├── scripts/
-│   └── add-blog.js    # Automated blog generator
 ├── public/
-│   ├── index.html     # Main HTML file
+│   ├── index.html     # Portfolio homepage
 │   ├── styles.css     # Shared portfolio styles
 │   ├── script.js      # Navigation and contact interactions
-│   └── blog/          # Individual blog post pages
+│   ├── images/        # Portfolio and project images
+│   └── projects/      # Individual project pages
 └── README.md          # This file
 ```
 
@@ -40,44 +39,9 @@ minimal-website/
 3. **Open your browser**:
    Navigate to `http://localhost:3000`
 
-## Adding Blog Posts
-
-Adding new writing is automated via a built-in script. Simply run:
-
-```bash
-node scripts/add-blog.js "Your Title" "Your plain text content here..."
-```
-
-This will automatically create a new HTML file in `public/blog/`, apply the minimalist styling, and insert the link into your main `index.html`.
-
 ## Customization
 
-### Personal Information
-
-Edit `public/index.html` to update:
-- **Name**: Change "Your Name" in the `<h1 class="name">` tag
-- **Bio**: Update the paragraph with class `bio`
-- **Avatar**: Replace the image source in the avatar section
-- **Projects**: Update project links and descriptions
-- **Contact**: Update email and social media links
-
-### Styling
-
-The site uses a single light appearance. Modify the color variables in `:root` in `public/styles.css`.
-
-### Adding New Projects
-
-The project section uses **Box Cards** for a professional look. Update `public/index.html` in the `.project-cards` div:
-
-```html
-<a href="your-url" target="_blank" class="project-card">
-    <div class="card-header">
-        <h3 class="repo-name">Project Name</h3>
-        <svg class="external-icon">...</svg>
-    </div>
-    <p class="repo-description">Project description</p>
-</a>
-```
+Edit `public/index.html` to update your introduction, projects, services, and contact links. Add project details in `public/projects/` and update the selected work cards on the homepage. Modify the color and layout rules in `public/styles.css`.
 
 ## Technologies Used
 
