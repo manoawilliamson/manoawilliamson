@@ -133,8 +133,8 @@ p { color: var(--muted); }
 .whatsapp-float {
   position: fixed;
   z-index: 20;
-  right: 20px;
-  bottom: calc(20px + env(safe-area-inset-bottom));
+  right: 36px;
+  bottom: calc(36px + env(safe-area-inset-bottom));
   display: grid;
   width: 56px;
   height: 56px;
@@ -220,7 +220,7 @@ p { color: var(--muted); }
   .positioning { gap: 12px; padding-block: 32px; }
   .positioning h2 { font-size: 32px; }
   .positioning p { font-size: 15px; }
-  .whatsapp-float { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); width: 52px; height: 52px; }
+  .whatsapp-float { right: 26px; bottom: calc(26px + env(safe-area-inset-bottom)); width: 52px; height: 52px; }
   .whatsapp-float svg { width: 27px; height: 27px; }
   .section, .services-section .section { padding-block: 46px; }
   h2 { font-size: 36px; }
