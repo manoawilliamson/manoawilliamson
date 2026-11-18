@@ -54,6 +54,8 @@ if (copyEmail && copyStatus && navigator.clipboard && window.isSecureContext) {
 
 const heroVideo = document.querySelector('.hero-video');
 if (heroVideo) {
+  const saveData = navigator.connection && navigator.connection.saveData;
+  heroVideo.src = !saveData && (window.innerWidth > 1200 || (window.innerWidth > 700 && window.devicePixelRatio > 1)) ? heroVideo.dataset.hdSrc : heroVideo.dataset.standardSrc;
   heroVideo.muted = true;
   const playHero = () => heroVideo.play().catch(() => {});
   if ('IntersectionObserver' in window) {

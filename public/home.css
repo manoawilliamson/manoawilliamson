@@ -38,3 +38,13 @@
 }
 
 .hero-work-link{display:inline-flex;align-items:center;gap:32px;margin-top:24px;padding:13px 18px;border:1px solid #fff;background:transparent;color:#fff;font-size:13px;font-weight:600}.hero-work-link:hover{background:#fff;color:#171c27}
+
+/* Keep the subject in view when the video is cropped on narrow screens. */
+@media(max-width:700px){.hero-video{object-position:43% center}}
+/* Preserve the video proportions as the viewport changes. */
+.hero-video{object-fit:cover;object-position:43% center}
+@media (min-width:701px) and (max-width:1200px){
+ .hero{min-height:0;padding-top:130px}
+ .hero h1{margin-top:clamp(45px,7vw,85px);margin-bottom:38px}
+ .hero-index{margin-top:0;padding-top:clamp(50px,8vw,90px)}
+}
