@@ -51,3 +51,9 @@ if (copyEmail && copyStatus && navigator.clipboard && window.isSecureContext) {
     resetStatus = setTimeout(() => { copyStatus.textContent = ''; }, 5000);
   });
 }
+
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.play().catch(() => {});
+}

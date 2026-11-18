@@ -1,0 +1,19 @@
+/* Native scrolling keeps touch, keyboard and browser navigation responsive. */
+html{scroll-behavior:smooth}
+a,button{transition:color .25s ease,background-color .25s ease,border-color .25s ease,transform .25s ease,opacity .25s ease}
+.project-visual img{transition:transform .7s cubic-bezier(.2,.65,.2,1)}
+.project-arrow,.round-link span:last-child,.contact-button span{transition:transform .3s ease,background-color .3s ease,color .3s ease}
+@media (hover:hover) and (pointer:fine){
+ .project-visual:hover img{transform:scale(1.025)}
+ .project-visual:hover .project-arrow{transform:translate(3px,-3px);background:#2457ed;color:#fff}
+ .round-link:hover span:last-child{transform:translateY(4px);background:#2457ed;border-color:#2457ed;color:#fff}
+ .contact-button:hover{background:#2457ed;color:#fff}
+ .contact-button:hover span{transform:translate(3px,-3px)}
+ .project-link:hover,.footer a:hover,.contact-details a:hover{color:#2457ed}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+.whatsapp-float{position:fixed;z-index:20;right:36px;bottom:calc(36px + env(safe-area-inset-bottom));display:grid;place-items:center;width:56px;height:56px;border:0;border-radius:50%;background:#2457ed;color:#fff;box-shadow:0 4px 14px #18253a24}
+.whatsapp-float svg{width:29px;height:29px}
+.whatsapp-float:hover{transform:translateY(-3px);background:#1742c6;color:#fff}
+@media(max-width:560px){.whatsapp-float{right:20px;bottom:calc(20px + env(safe-area-inset-bottom))}}
