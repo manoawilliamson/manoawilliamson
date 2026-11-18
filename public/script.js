@@ -55,5 +55,18 @@ if (copyEmail && copyStatus && navigator.clipboard && window.isSecureContext) {
 const heroVideo = document.querySelector('.hero-video');
 if (heroVideo) {
   heroVideo.muted = true;
-  heroVideo.play().catch(() => {});
+  const playHero = () => heroVideo.play().catch(() => {});
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !document.hidden) playHero();
+      else heroVideo.pause();
+    }, { threshold: 0 });
+    videoObserver.observe(heroVideo);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) heroVideo.pause();
+      else if (heroVideo.getBoundingClientRect().bottom > 0) playHero();
+    });
+  } else {
+    playHero();
+  }
 }

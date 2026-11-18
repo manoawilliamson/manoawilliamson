@@ -17,3 +17,6 @@ a,button{transition:color .25s ease,background-color .25s ease,border-color .25s
 .whatsapp-float svg{width:29px;height:29px}
 .whatsapp-float:hover{transform:translateY(-3px);background:#1742c6;color:#fff}
 @media(max-width:560px){.whatsapp-float{right:20px;bottom:calc(20px + env(safe-area-inset-bottom))}}
+
+.arrow-icon{display:inline-block;width:1em;height:1em;vertical-align:-.12em;flex:none}
+.project-arrow .arrow-icon{width:19px;height:19px;vertical-align:0}
